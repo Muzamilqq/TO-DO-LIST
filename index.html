@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DO IT — Task Manager</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="eyebrow">// Daily Tasks</div>
+        <h1>DO<br />IT.</h1>
+        <div class="header-rule"></div>
+        <div class="stats">
+          <div><span id="stat-total">0</span> total</div>
+          <div><span id="stat-done">0</span> done</div>
+          <div><span id="stat-left">0</span> remaining</div>
+        </div>
+      </header>
+
+      <div class="input-area">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="Add a new task..."
+          maxlength="200"
+          autocomplete="off"
+        />
+        <button class="add-btn" id="add-btn">+ Add</button>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="done">Completed</button>
+      </div>
+
+      <div class="task-list" id="task-list"></div>
+
+      <div class="actions">
+        <button class="clear-btn" id="clear-btn">Clear completed</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
